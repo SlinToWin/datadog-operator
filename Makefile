@@ -171,7 +171,6 @@ tidy: ## Run go tidy
 .PHONY: vendor
 vendor: ## Run go vendor
 	go mod vendor
-	./hack/vendor/patch-vendor.sh
 
 kubectl-datadog: lint
 	go build -ldflags '${LDFLAGS}' -o bin/kubectl-datadog ./cmd/kubectl-datadog/main.go
